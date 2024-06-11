@@ -3,7 +3,7 @@ import Review from "./Review";
 
 const data = [
     {
-      id: 0,
+      id: 1,
       name: 'susan smith',
       job: 'web developer',
       image:
@@ -12,7 +12,7 @@ const data = [
         "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
     },
     {
-      id: 1,
+      id: 2,
       name: 'anna johnson',
       job: 'web designer',
       image:
@@ -21,7 +21,7 @@ const data = [
         'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
     },
     {
-      id: 2,
+      id: 3,
       name: 'peter jones',
       job: 'intern',
       image:
@@ -30,7 +30,7 @@ const data = [
         'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
     },
     {
-      id: 3,
+      id: 4,
       name: 'bill anderson',
       job: 'the boss',
       image:
@@ -47,10 +47,8 @@ function App() {
     const handleClick = (value) => {
         switch (value) {
             case 0:
-                if (index > 0) {
-                    setIndex(index-1)
-                    setReview(data[index-1])
-                }
+                setIndex(index === 0 ? data.length - 1 : index - 1)
+                setReview(data[index === 0 ? data.length - 1 : index - 1])
                 break;
             case 1:
                 const randomDecimal = Math.random();
@@ -59,10 +57,8 @@ function App() {
                 setReview(data[randomNumber])
                 break;
             case 2:
-                if (index+1 < data.length) {
-                    setIndex(index+1)
-                    setReview(data[index+1])
-                }
+                setIndex(index === data.length - 1 ? 0 : index + 1)
+                setReview(data[index === data.length - 1 ? 0 : index + 1])
                 break;
         
             default:
