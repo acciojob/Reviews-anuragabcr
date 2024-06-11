@@ -49,19 +49,19 @@ function App() {
             case 0:
                 if (index > 0) {
                     setIndex(index-1)
-                    setReview(data[index])
+                    setReview(data[index-1])
                 }
                 break;
             case 1:
                 const randomDecimal = Math.random();
                 const randomNumber = Math.floor(randomDecimal * (data.length - 1));
                 setIndex(randomNumber)
-                setReview(data[index])
+                setReview(data[randomNumber])
                 break;
             case 2:
-                if (index < data.length) {
+                if (index+1 < data.length) {
                     setIndex(index+1)
-                    setReview(data[index])
+                    setReview(data[index+1])
                 }
                 break;
         
@@ -73,12 +73,7 @@ function App() {
     return (
         <>
             <h2 id="review-heading">Our Reviews</h2>
-            <Review review={review} />
-            <div>
-                <button className="prev-btn" onClick={() => handleClick(0)}>Previous Review</button>    
-                <button className="random-btn" onClick={() => handleClick(1)}>surprise me</button>    
-                <button className="next-btn" onClick={() => handleClick(2)}>Next Review</button>    
-            </div>        
+            <Review review={review} handleClick={handleClick} />     
         </>
     )
 }
