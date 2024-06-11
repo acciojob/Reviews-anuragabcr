@@ -3,7 +3,7 @@ import Review from "./Review";
 
 const data = [
     {
-      id: 1,
+      id: 0,
       name: 'susan smith',
       job: 'web developer',
       image:
@@ -12,7 +12,7 @@ const data = [
         "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
     },
     {
-      id: 2,
+      id: 1,
       name: 'anna johnson',
       job: 'web designer',
       image:
@@ -21,7 +21,7 @@ const data = [
         'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
     },
     {
-      id: 3,
+      id: 2,
       name: 'peter jones',
       job: 'intern',
       image:
@@ -30,7 +30,7 @@ const data = [
         'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
     },
     {
-      id: 4,
+      id: 3,
       name: 'bill anderson',
       job: 'the boss',
       image:
