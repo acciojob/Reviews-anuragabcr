@@ -51,10 +51,12 @@ function App() {
                 setReview(data[index === 0 ? data.length - 1 : index - 1])
                 break;
             case 1:
-                const randomDecimal = Math.random();
-                const randomNumber = Math.floor(randomDecimal * (data.length - 1));
-                setIndex(randomNumber)
-                setReview(data[randomNumber])
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * data.length);
+                } while (randomIndex === index);
+                setIndex(randomIndex)
+                setReview(data[randomIndex])
                 break;
             case 2:
                 setIndex(index === data.length - 1 ? 0 : index + 1)
